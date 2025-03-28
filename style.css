@@ -8,7 +8,7 @@ body {
 }
 
 a {
-  color: #e7ce95;
+  color: #e6cf9c;
   text-decoration: none;
   margin: 0 12px;
   font-size: 26px;
@@ -96,6 +96,15 @@ a {
 }
 
 /* ナビゲーション */
+/* トップページ専用ナビ調整 */
+.top-nav a {
+  font-size: 18px;
+  color: #EFEAE4;
+  margin: 0 16px;
+  letter-spacing: 0.05em;
+  /* その他調整したいこと */
+}
+
 .nav {
   position: absolute;
   bottom: 30px;
