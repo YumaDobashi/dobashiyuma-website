@@ -36,8 +36,9 @@ a {
   align-items: center;
 }
 
+
 .fade-text {
-  font-size: 20px;
+  font-size: 28px;
   color: #FAF8F2;
   text-align: center;
   margin-top: 20px;
@@ -53,12 +54,12 @@ a {
 }
 
 .site-title h1 {
-  font-size: 36px;
+  font-size: 40px;
   margin: 0;
 }
 
 .site-title h2 {
-  font-size: 20px;
+  font-size: 24px;
   font-style: italic;
   color: #c9c9c9;
   margin-top: 4px;
@@ -68,6 +69,18 @@ a {
   font-size: 16px;
   color: #eaeaea;
   margin-top: 12px;
+}
+
+.official-text {
+  font-size: 20px;
+  color: #eaeaea;
+  margin-top: 12px;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  text-align: center;
+}
+.official-text.visible {
+  opacity: 1;
 }
 
 .fade-in-text {
@@ -83,9 +96,12 @@ a {
 .nav {
   position: absolute;
   bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   gap: 16px;
 }
+
 
 /* 歌詞セクション */
 .lyric {
