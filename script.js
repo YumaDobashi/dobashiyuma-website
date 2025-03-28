@@ -4,6 +4,6 @@ window.addEventListener("DOMContentLoaded", () => {
       if (official) {
         official.classList.add("visible");
       }
-    }, 2000); // 2秒後にフェードイン（調整可）
+    }, 2000); // 2秒後にフェードイン
   });
   

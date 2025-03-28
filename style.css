@@ -35,20 +35,36 @@ background-size: cover;
     z-index: 2;
   }
   
-  .fade-text {
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out;
+  
+  .site-title {
+    text-align: center;
+    margin-top: 30vh;
+    color: #FAF8F2;
   }
-
+  
+  .site-title h1 {
+    font-size: 36px;
+    margin: 0;
+  }
+  
+  .site-title h2 {
+    font-size: 20px;
+    font-style: italic;
+    color: #c9c9c9;
+    margin-top: 4px;
+  }
+  
   .fade-in-text {
+    font-size: 16px;
     opacity: 0;
     transition: opacity 2s ease-in-out;
+    margin-top: 20px;
+    color: #eaeaea;
   }
+  
   .fade-in-text.visible {
     opacity: 1;
   }
-  
-  
   
   .overlay {
     position: absolute;
