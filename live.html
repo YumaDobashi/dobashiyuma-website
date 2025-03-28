@@ -3,16 +3,162 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Live Schedule</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>演奏予定 | Yuma Dobashi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Shippori+Mincho+B1&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #FFFFFF;
+      color: #2C2C2C;
+      font-family: 'Shippori Mincho B1', serif;
+      line-height: 1.9;
+      background-image: url('images/texture-paper.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      padding-top: 100px;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.95);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 40px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+      z-index: 999;
+    }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: #1F1F1F;
+      text-decoration: none;
+    }
+
+    nav a {
+      margin-left: 24px;
+      font-size: 15px;
+      color: #4A4744;
+      text-decoration: none;
+    }
+
+    .page-title {
+      text-align: center;
+      font-size: 32px;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      color: #1F1F1F;
+      letter-spacing: 0.05em;
+      margin-bottom: 80px;
+    }
+
+    .live-block {
+      max-width: 720px;
+      margin: 0 auto 80px;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: row;
+      gap: 32px;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      padding-bottom: 40px;
+    }
+
+    .live-text {
+      flex: 1;
+    }
+
+    .live-date {
+      font-size: 14px;
+      color: #7A736C;
+    }
+
+    .live-title {
+      font-size: 22px;
+      font-weight: bold;
+      color: #2C2C2C;
+      margin: 12px 0 8px;
+    }
+
+    .live-meta {
+      font-size: 15px;
+      margin: 4px 0;
+    }
+
+    .live-note {
+      margin-top: 12px;
+      font-style: italic;
+      color: #A1895C;
+      font-size: 14px;
+    }
+
+    .live-flyer {
+      width: 160px;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .live-flyer:hover {
+      transform: scale(1.06);
+    }
+
+    @media (max-width: 768px) {
+      .live-block {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .live-flyer {
+        width: 100%;
+        max-width: 300px;
+        margin-top: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <a href="index.html" class="logo">Yuma Dobashi</a>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="live.html">Live</a>
+      <a href="works.html">Works</a>
+      <a href="photo.html">Photo</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-  <h1>Live Schedule</h1>
-  <div id="live-container"></div>
-  <body class="live-page">
-    
+  <h1 class="page-title">演奏予定</h1>
 
-  <script src="script.js"></script>
+  <div class="live-block">
+    <div class="live-text">
+      <p class="live-date">2025年4月6日（日） / 焼き鳥元ちゃん（富士宮）</p>
+      <p class="live-title">BROS FEST.への導き</p>
+      <p class="live-meta">出演：土橋悠宇 / dsk.og</p>
+      <p class="live-meta">開場 16:00 / 開演 17:00</p>
+      <p class="live-meta">チケット：2,000円（+1D）</p>
+      <p class="live-note">あの夜に、帰ろう。</p>
+    </div>
+    <img src="images/flyer-sample1.jpg" alt="ライブフライヤー" class="live-flyer" />
+  </div>
+
+  <div class="live-block">
+    <div class="live-text">
+      <p class="live-date">2025年4月19日（土） / RINCOLO（御殿場）</p>
+      <p class="live-title">単独公演 2025</p>
+      <p class="live-meta">出演：土橋悠宇</p>
+      <p class="live-meta">開場 18:00 / 開演 19:00</p>
+      <p class="live-meta">チケット：2,000円（+1D）</p>
+      <p class="live-note">灯りはまだ消えない。</p>
+    </div>
+    <img src="images/flyer-sample2.jpg" alt="ライブフライヤー" class="live-flyer" />
+  </div>
 </body>
 </html>
