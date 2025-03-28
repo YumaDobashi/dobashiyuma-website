@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: '游明朝体', 'Yu Mincho', serif' Noto Serif JP', serif;
+    font-family: '游明朝体', 'Yu Mincho', 'Noto Serif JP', serif;
     background-color: #1A2B23;
     color: #EDEDED;
     letter-spacing: 0.05em;
@@ -94,5 +94,11 @@ background-size: cover;
     padding: 20px;
     font-size: 12px;
     color: #888;
+  }
+  @media (max-width: 768px) {
+    .main-text,
+    .rotating-text {
+      font-size: 20px;
+    }
   }
   
