@@ -1,127 +1,128 @@
-/* フォントやベースのスタイル */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: '游明朝体', 'Yu Mincho', 'Noto Serif JP', serif;
-    background-color: #1A2B23;
-    color: #EDEDED;
-    letter-spacing: 0.05em;
-  }
-  
-  a {
-    color: #C1A973;
-    text-decoration: none;
-    margin: 0 12px;
-    font-size: 14px;
-  }
-  
-  /* ヒーローセクション */
-  .hero {
-    position: relative;
-    height: 100vh;
-    background: url('images/background2.jpg') center center / cover no-repeat;
-background-attachment: fixed;
-background-size: cover;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: '游明朝体', 'Yu Mincho', 'Noto Serif JP', serif;
+  background-color: #1A2B23;
+  color: #EDEDED;
+  letter-spacing: 0.05em;
+}
 
-  .rotating-text {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    color: #FAF8F2;
-    font-size: 32px;
-    width: 100%;
-    z-index: 2;
-  }
-  
-  
-  .site-title {
-    text-align: center;
-    margin-top: 30vh;
-    color: #FAF8F2;
-  }
-  
-  .site-title h1 {
-    font-size: 36px;
-    margin: 0;
-  }
-  
-  .site-title h2 {
-    font-size: 20px;
-    font-style: italic;
-    color: #c9c9c9;
-    margin-top: 4px;
-  }
-  
-  .fade-in-text {
-    opacity: 0;
-    transition: opacity 2s ease-in-out;
-  }
-  
-  .fade-in-text.visible {
-    opacity: 1;
-  }
-  
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(10, 10, 10, 0.4);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .main-text {
-    font-size: 32px;
-    color: #FAF8F2;
-    text-shadow: 0 0 5px rgba(0,0,0,0.6);
-    margin-bottom: 20px;
-  }
-  
-  /* ナビゲーション */
-  .nav {
-    position: absolute;
-    bottom: 30px;
-    display: flex;
-    gap: 16px;
-  }
-  
-  /* 歌詞セクション */
-  .lyric {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #E3E0DC;
-    color: #1A2B23;
-  }
-  
-  .lyric-jp {
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .lyric-fake {
-    font-size: 16px;
-    font-style: italic;
-    color: #555;
-  }
-  
-  /* フッター */
-  footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 12px;
-    color: #888;
-  }
-  /* ▼ ここから追加！ */
+a {
+  color: #C1A973;
+  text-decoration: none;
+  margin: 0 12px;
+  font-size: 14px;
+}
+
+/* ヒーローセクション */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('images/background2.jpg') center center / cover no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fade-text {
+  font-size: 20px;
+  color: #FAF8F2;
+  text-align: center;
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  min-height: 2em;
+}
+
+.site-title {
+  text-align: center;
+  margin-top: 40px;
+  color: #FAF8F2;
+}
+
+.site-title h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.site-title h2 {
+  font-size: 20px;
+  font-style: italic;
+  color: #c9c9c9;
+  margin-top: 4px;
+}
+
+.site-title h3 {
+  font-size: 16px;
+  color: #eaeaea;
+  margin-top: 12px;
+}
+
+.fade-in-text {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.fade-in-text.visible {
+  opacity: 1;
+}
+
+/* ナビゲーション */
+.nav {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  gap: 16px;
+}
+
+/* 歌詞セクション */
+.lyric {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #E3E0DC;
+  color: #1A2B23;
+}
+
+.lyric-jp {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.lyric-fake {
+  font-size: 16px;
+  font-style: italic;
+  color: #555;
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+  color: #888;
+}
+
+/* モバイル用調整 */
 @media (max-width: 768px) {
-  .main-text,
-  .rotating-text {
-    font-size: 20px;
+  .site-title h1 {
+    font-size: 28px;
+  }
+  .site-title h2 {
+    font-size: 16px;
+  }
+  .fade-text {
+    font-size: 16px;
   }
 }
