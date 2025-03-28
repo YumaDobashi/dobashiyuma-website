@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>土橋悠宇 | Official Site</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section class="hero">
+    <div class="overlay">
+      <div class="rotating-text">
+        <span class="fade-text">I am Dobashi Yuma.</span>
+      </div>
+      <nav class="nav">
+        <a href="#">About</a>
+        <a href="#">Live</a>
+        <a href="#">Works</a>
+        <a href="#">Photo</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="lyric">
+    <p class="lyric-jp">この星で過ごす束の間、<br>それでも僕たちは出逢えた</p>
+    <p class="lyric-fake">u luen sain a mi yeal<br>luen nyns tea sain o o</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Yuma Dobashi</p>
+  </footer>
+<script>
+  const texts = [
+    "それは寂しさに似た優しさ。",
+    "あなたのおかずは憎しみじゃないでしょう。",
+    "目的地などあってないようなもの。だなんて言い聞かせては、また行き先を探している。",
+    "",
+    "沈黙の中にも、かすかに灯る音がある。"
+  ];
+
+  const textElement = document.querySelector('.fade-text');
+  let index = 0;
+
+  function showNextText() {
+    textElement.style.opacity = 0;
+
+    setTimeout(() => {
+      textElement.textContent = texts[index];
+      textElement.style.opacity = 1;
+      index = (index + 1) % texts.length;
+    }, 1500); // フェードアウト完了まで待つ
+  }
+
+  // 初回表示
+  textElement.textContent = texts[0];
+  textElement.style.opacity = 1;
+  index++;
+
+  // ループ
+  setInterval(showNextText, 6000); // 6秒ごとに切り替え
+</script>
+
+</body>
+</html>

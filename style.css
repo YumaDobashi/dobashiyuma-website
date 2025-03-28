@@ -1,0 +1,98 @@
+/* フォントやベースのスタイル */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: '游明朝体', 'Yu Mincho', serif;
+    background-color: #1A2B23;
+    color: #EDEDED;
+    letter-spacing: 0.05em;
+  }
+  
+  a {
+    color: #C1A973;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 14px;
+  }
+  
+  /* ヒーローセクション */
+  .hero {
+    position: relative;
+    height: 100vh;
+    background: url('images/background.jpg') center center / cover no-repeat;
+background-attachment: fixed;
+background-size: cover;
+  }
+
+  .rotating-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #FAF8F2;
+    font-size: 32px;
+    width: 100%;
+    z-index: 2;
+  }
+  
+  .fade-text {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+  }
+  
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 10, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main-text {
+    font-size: 32px;
+    color: #FAF8F2;
+    text-shadow: 0 0 5px rgba(0,0,0,0.6);
+    margin-bottom: 20px;
+  }
+  
+  /* ナビゲーション */
+  .nav {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    gap: 16px;
+  }
+  
+  /* 歌詞セクション */
+  .lyric {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #E3E0DC;
+    color: #1A2B23;
+  }
+  
+  .lyric-jp {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .lyric-fake {
+    font-size: 16px;
+    font-style: italic;
+    color: #555;
+  }
+  
+  /* フッター */
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: #888;
+  }
+  
