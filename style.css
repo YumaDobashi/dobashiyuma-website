@@ -95,10 +95,10 @@ background-size: cover;
     font-size: 12px;
     color: #888;
   }
-  @media (max-width: 768px) {
-    .main-text,
-    .rotating-text {
-      font-size: 20px;
-    }
+  /* ▼ ここから追加！ */
+@media (max-width: 768px) {
+  .main-text,
+  .rotating-text {
+    font-size: 20px;
   }
-  
+}
