@@ -10,10 +10,10 @@
   <style>
     body {
       margin: 0;
-      background-color: #f6e3d6ac;
+      background-color: #f5ece7ac;
       color: #2C2C2C;
       font-family: 'Shippori Mincho B1', serif;
-      line-height: 3.2;
+      line-height: 1.9;
       background-image: url('images/texture-paper.jpg');
       background-size: cover;
       background-attachment: fixed;
@@ -103,15 +103,17 @@
     }
 
     .live-flyer {
-      width: 60%;
-      border-radius: 0px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      object-fit: cover;
-      transition: transform 0.3s ease;
+     width: 40%;
+     height: auto;
+     max-height: 600px;  /* 最大縦サイズ指定で制御 */
+     object-fit: contain;
+     display: block;
+     margin-top: 12px;
+     transition: transform 0.3s ease;
     }
 
     .live-flyer:hover {
-      transform: scale(1.3);
+      transform: scale(1.4);
     }
 
     @media (max-width: 768px) {
@@ -126,6 +128,8 @@
         margin-top: 16px;
       }
     }
+
+
   </style>
 </head>
 <body>

@@ -8,10 +8,10 @@ body {
 }
 
 a {
-  color: #C1A973;
+  color: #e7ce95;
   text-decoration: none;
   margin: 0 12px;
-  font-size: 20px;
+  font-size: 26px;
 }
 
 /* ヒーローセクション */
@@ -129,7 +129,7 @@ a {
 footer {
   text-align: center;
   padding: 20px;
-  font-size: 12px;
+  font-size: 16px;
   color: #888;
 }
 
