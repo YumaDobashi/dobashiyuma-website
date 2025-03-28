@@ -138,6 +138,27 @@ footer {
   padding: 60px 20px;
 }
 
+.live-page h1 {
+  text-align: center;
+  font-size: 28px;
+  color: #4A3F35;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  letter-spacing: 0.05em;
+}
+
+.live-page h1 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: normal;
+  font-style: italic;
+  color: #8B7763;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  letter-spacing: 0.1em;
+}
+
+
 .live-entry {
   margin-bottom: 80px;
   padding-bottom: 40px;
@@ -160,7 +181,7 @@ footer {
 }
 
 .live-entry p strong {
-  color: #C1A973;
+  color: #2f2714;
 }
 
 .live-entry img.flyer {
@@ -227,4 +248,72 @@ footer {
   color: #C1A973;
   font-size: 14px;
   text-decoration: underline;
+}
+
+
+/* === Liveページ専用スタイル === */
+.live-page {
+  background-color: #F7F4EF;
+  color: #b41717;
+  font-family: '游明朝体', 'Yu Mincho', 'Noto Serif JP', serif;
+}
+
+.live-page .live-container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.live-page .live-entry {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 60px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, opacity 0.5s ease;
+  text-align: center;
+}
+
+.live-page .live-entry h2 {
+  font-size: 20px;
+  color: #4A3F35;
+  margin-bottom: 12px;
+}
+
+.live-page .live-entry p {
+  font-size: 14px;
+  color: #5C5147;
+  margin: 6px 0;
+  line-height: 1.6;
+}
+
+.live-page .live-entry p strong {
+  color: #A48153;
+}
+
+.live-page .live-entry img.flyer {
+  margin-top: 20px;
+  width: 330px; /* ← 小さめに表示 */
+  border-radius: 6px;
+  transition: transform 0.4s ease;
+}
+
+.live-page .live-entry img.flyer:hover {
+  transform: scale(2.0); /* ← 拡大率UP！！ */
+  z-index: 10;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+.live-page::before {
+  content: "";
+  position: fixed; /* ← スクロールしても固定される */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('images/live-bg.jpg') center center / cover no-repeat;
+  opacity: 0.1; /* ← 雰囲気だけに抑える */
+  z-index: -1;
 }
