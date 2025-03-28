@@ -11,7 +11,7 @@ a {
   color: #C1A973;
   text-decoration: none;
   margin: 0 12px;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 /* ヒーローセクション */
@@ -50,34 +50,37 @@ a {
 .site-title {
   text-align: center;
   margin-top: 40px;
-  color: #FAF8F2;
+  color: #f0eee9;
 }
 
 .site-title h1 {
   font-size: 40px;
   margin: 0;
+  letter-spacing: 5px
 }
 
 .site-title h2 {
   font-size: 24px;
   font-style: italic;
-  color: #c9c9c9;
-  margin-top: 4px;
+  color: #c5c5c5;
+  margin-top: 3px;
+  letter-spacing: 7px
 }
 
 .site-title h3 {
-  font-size: 16px;
+  font-size: 14px;
   color: #eaeaea;
   margin-top: 12px;
 }
 
 .official-text {
-  font-size: 20px;
-  color: #eaeaea;
-  margin-top: 12px;
+  font-size: 30px;
+  color: #f4e7e7;
+  margin-top: 20px;
   opacity: 0;
   transition: opacity 2s ease-in-out;
   text-align: center;
+  letter-spacing: 2px
 }
 .official-text.visible {
   opacity: 1;
