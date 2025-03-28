@@ -253,8 +253,8 @@ footer {
 
 /* === Liveページ専用スタイル === */
 .live-page {
-  background-color: #F7F4EF;
-  color: #b41717;
+  background-color: #fbdca854;
+  color: #6b9837;
   font-family: '游明朝体', 'Yu Mincho', 'Noto Serif JP', serif;
 }
 
@@ -266,7 +266,7 @@ footer {
 }
 
 .live-page .live-entry {
-  background-color: #fff;
+  background-color: #c3beb07d;
   padding: 30px;
   border-radius: 10px;
   margin-bottom: 60px;
@@ -313,7 +313,7 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('images/live-bg.jpg') center center / cover no-repeat;
-  opacity: 0.1; /* ← 雰囲気だけに抑える */
+  background: url('images/live-bg3.jpg') center center / cover no-repeat;
+  opacity: 0.5; /* ← 雰囲気だけに抑える */
   z-index: -1;
 }
