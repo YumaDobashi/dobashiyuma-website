@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: '游明朝体', 'Yu Mincho', serif;
+    font-family: '游明朝体', 'Yu Mincho', serif' Noto Serif JP', serif;
     background-color: #1A2B23;
     color: #EDEDED;
     letter-spacing: 0.05em;
