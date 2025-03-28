@@ -7,22 +7,26 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <section class="hero">
     <div class="overlay">
-      <div class="site-title">
+      <div class="site-title fade-in-text">
         <h1>土橋悠宇</h1>
         <h2>-dobashi yuma-</h2>
-        <h3 id="official-text" class="fade-in-text">Official Site</h3>
+        <h3>Official Site</h3>
       </div>
-      <nav class="nav">
-        <a href="#">About</a>
-        <a href="#">Live</a>
-        <a href="#">Works</a>
-        <a href="#">Photo</a>
-        <a href="#">Contact</a>
-      </nav>
+        
+      </div>
+      <div class="fade-text"></div>
+
     </div>
+
+    <nav class="nav">
+      <a href="#">About</a>
+      <a href="#">Live</a>
+      <a href="#">Works</a>
+      <a href="#">Photo</a>
+      <a href="#">Contact</a>
+    </nav>
   </section>
 
   <section class="lyric">
@@ -33,39 +37,52 @@
   <footer>
     <p>&copy; 2025 Yuma Dobashi</p>
   </footer>
-<script>
-  const texts = [
-    "対岸に辿り着く頃には",
-    "すべてが懐かしく感じるだろう。",
-    "澄み切った川底は",
-    "影さえも良く見えた。",
-    "深いほど",
-    "深いほど。",
-    "",
-  ];
 
+  <script>
+    const texts = [
+  "対岸に辿り着く頃には",
+  "すべてが懐かしく感じるだろう。",
+  "澄み切った川底は",
+  "影さえも良く見えた。",
+  "深いほど",
+  "深いほど。",
+  "", // ← 最後は空白（余韻）
+];
 
-  const textElement = document.querySelector('.fade-text');
-  let index = 0;
+const textElement = document.querySelector('.fade-text');
+const titleElement = document.querySelector('.site-title'); // ← 追加
+let index = 0;
 
-  function showNextText() {
-    textElement.style.opacity = 0;
+function showNextText() {
+  textElement.style.opacity = 0;
 
-    setTimeout(() => {
-      textElement.textContent = texts[index];
-      textElement.style.opacity = 1;
-      index = (index + 1) % texts.length;
-    }, 1500); // フェードアウト完了まで待つ
+  setTimeout(() => {
+    textElement.textContent = texts[index];
+    textElement.style.opacity = 1;
+
+    // 最後の詩のあとにタイトル出す
+    if (index === texts.length - 1) {
+      setTimeout(() => {
+        titleElement.classList.add('visible');
+      }, 1500); // 余白の後に出現
+    }
+
+    index++;
+  }, 1500);
+}
+
+textElement.textContent = texts[0];
+textElement.style.opacity = 1;
+index++;
+
+setInterval(() => {
+  if (index < texts.length) {
+    showNextText();
   }
+}, 5500);
 
-  // 初回表示
-  textElement.textContent = texts[0];
-  textElement.style.opacity = 1;
-  index++;
-
-  // ループ
-  setInterval(showNextText, 5500); // 5,5秒ごとに切り替え
-</script>
+  </script>
 
 </body>
 </html>
+
