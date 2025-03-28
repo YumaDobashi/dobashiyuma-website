@@ -54,26 +54,26 @@ document.addEventListener("DOMContentLoaded", () => {
     if (container) {
       const lives = [
         {
-          date: "2025年6月3日（火）",
-          venue: "渋谷 WWW",
-          title: "夜明けの詩と波の音",
-          acts: "土橋悠宇 / UMI / and more",
-          ticket: "前売 ¥3,000 / 当日 ¥3,500（+1D）",
-          time: "18:30 開場 / 19:00 開演",
-          note: "再入場不可 / 整理番号順入場",
+          date: "2025年4月6日（日）",
+          venue: "焼き鳥元ちゃん（富士宮）",
+          title: "BROS FEST.への導き",
+          acts: "土橋悠宇 / dsk.og ",
+          ticket: "¥2,000（+1D）",
+          time: "16:00 開場 / 17:00 開演",
+          note: "",
           flyer: "images/flyer-sample1.jpg"
         },
         
         // ここに新しいライブを追加
 
         {
-          date: "2025年7月14日（日）",
-          venue: "吉祥寺 STAR PINE'S CAFE",
-          title: "響きの灯、透明な夜",
-          acts: "土橋悠宇 / 灯 / 岡田千尋",
-          ticket: "前売 ¥2,800 / 当日 ¥3,300（+1D）",
-          time: "17:00 開場 / 17:30 開演",
-          note: "物販は終演後のみ",
+          date: "2025年4月19日（土）",
+          venue: "RINCOLO（御殿場）",
+          title: "単独公演2025",
+          acts: "土橋悠宇",
+          ticket: "¥2,000（+1D）",
+          time: "18:00 開場 / 19:00 開演",
+          note: "",
           flyer: "images/flyer-sample2.jpg"
         }
       ];
