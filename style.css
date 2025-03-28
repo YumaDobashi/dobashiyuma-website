@@ -130,15 +130,101 @@ footer {
   color: #888;
 }
 
-/* モバイル用調整 */
-@media (max-width: 768px) {
-  .site-title h1 {
-    font-size: 28px;
-  }
-  .site-title h2 {
-    font-size: 16px;
-  }
-  .fade-text {
-    font-size: 16px;
-  }
+
+/* --- Liveページの整ったデザイン --- */
+.live-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.live-entry {
+  margin-bottom: 80px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.live-entry h2 {
+  font-size: 20px;
+  font-weight: normal;
+  color: #F0ECE6;
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
+}
+
+.live-entry p {
+  font-size: 15px;
+  color: #D8D3CB;
+  margin: 4px 0;
+  line-height: 1.7;
+}
+
+.live-entry p strong {
+  color: #C1A973;
+}
+
+.live-entry img.flyer {
+  margin-top: 20px;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.live-entry img.flyer:hover {
+  transform: scale(1.02);
+}
+
+.live-preview {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 20px;
+  background-color: rgba(255,255,255,0.04);
+  border-left: 4px solid #C1A973;
+  border-radius: 4px;
+  color: #EEE;
+}
+
+.live-preview h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #C1A973;
+}
+
+.live-preview p {
+  font-size: 14px;
+  margin: 6px 0;
+}
+
+/* === トップページ用：次回ライブ案内 === */
+.live-preview {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 28px 24px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #C1A973;
+  border-radius: 6px;
+  color: #EFEAE4;
+  text-align: left;
+  font-family: '游明朝体', 'Yu Mincho', 'Noto Serif JP', serif;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.live-preview h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #C1A973;
+  letter-spacing: 0.05em;
+}
+
+.live-preview p {
+  font-size: 14px;
+  margin: 6px 0;
+  line-height: 1.6;
+}
+
+.live-preview a {
+  color: #C1A973;
+  font-size: 14px;
+  text-decoration: underline;
 }
