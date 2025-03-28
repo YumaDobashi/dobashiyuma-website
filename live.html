@@ -1,76 +1,16 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Live Schedule - Yuma Dobashi</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: '游明朝体', 'Yu Mincho', 'Noto Serif JP', serif;
-      background-color: #1A2B23;
-      color: #FAF8F2;
-      margin: 0;
-      padding: 20px;
-    }
-    h1 {
-      text-align: center;
-      font-size: 32px;
-      margin-bottom: 40px;
-    }
-    .live-entry {
-      border: 1px solid #C1A973;
-      padding: 20px;
-      margin-bottom: 30px;
-      border-radius: 8px;
-      background-color: rgba(255, 255, 255, 0.05);
-    }
-    .live-entry h2 {
-      font-size: 24px;
-      margin: 0 0 10px;
-      color: #EDEDED;
-    }
-    .live-entry p {
-      margin: 6px 0;
-      font-size: 16px;
-      line-height: 1.6;
-    }
-    .flyer {
-      max-width: 100%;
-      height: auto;
-      margin-top: 15px;
-      border-radius: 6px;
-    }
-    @media (max-width: 600px) {
-      h1 { font-size: 24px; }
-      .live-entry h2 { font-size: 20px; }
-      .live-entry p { font-size: 14px; }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Schedule</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <h1>Live Schedule</h1>
+  <div id="live-container"></div>
 
-  <div class="live-entry">
-    <h2>2025年6月3日（火）@ 渋谷 WWW</h2>
-    <p><strong>出演：</strong>土橋悠宇 / UMI / and more</p>
-    <p><strong>タイトル：</strong>夜明けの詩と波の音</p>
-    <p><strong>チケット：</strong>前売 ¥3,000 / 当日 ¥3,500（+1D）</p>
-    <p><strong>開場/開演：</strong>18:30 開場 / 19:00 開演</p>
-    <p><strong>備考：</strong>再入場不可 / 整理番号順入場</p>
-    <img src="images/flyer-sample1.jpg" alt="ライブフライヤー" class="flyer">
-  </div>
-
-  <div class="live-entry">
-    <h2>2025年7月14日（日）@ 吉祥寺 STAR PINE'S CAFE</h2>
-    <p><strong>出演：</strong>土橋悠宇 / 灯 / 岡田千尋</p>
-    <p><strong>タイトル：</strong>響きの灯、透明な夜</p>
-    <p><strong>チケット：</strong>前売 ¥2,800 / 当日 ¥3,300（+1D）</p>
-    <p><strong>開場/開演：</strong>17:00 開場 / 17:30 開演</p>
-    <p><strong>備考：</strong>物販は終演後のみ</p>
-    <img src="images/flyer-sample2.jpg" alt="ライブフライヤー" class="flyer">
-  </div>
-
+  <script src="script.js"></script>
 </body>
 </html>

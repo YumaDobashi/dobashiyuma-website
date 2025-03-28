@@ -47,3 +47,23 @@ const texts = [
     }
   }, 5500);
   
+
+  fetch('lives.json')
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById('live-container');
+    data.forEach(live => {
+      const div = document.createElement('div');
+      div.className = 'live-entry';
+      div.innerHTML = `
+        <h2>${live.date} @ ${live.venue}</h2>
+        <p><strong>出演：</strong>${live.acts}</p>
+        <p><strong>タイトル：</strong>${live.title}</p>
+        <p><strong>チケット：</strong>${live.ticket}</p>
+        <p><strong>開場/開演：</strong>${live.time}</p>
+        <p><strong>備考：</strong>${live.note}</p>
+        <img src="${live.flyer}" alt="フライヤー" class="flyer">
+      `;
+      container.appendChild(div);
+    });
+  });
