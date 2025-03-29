@@ -6,6 +6,61 @@
   <title>Dobashi Yuma Official Site</title>
   <link rel="stylesheet" href="shared.css">
   <link rel="stylesheet" href="style.css" />
+  <style>
+    html {
+      font-size: 40%; /* 基準サイズを10pxに（相対指定のため） */
+    }
+
+    body {
+      font-size: 1.6rem; /* 通常サイズを16px相当で定義 */
+    }
+
+    @media (max-width: 768px) {
+      html {
+        font-size: 56.25%; /* モバイル時に文字縮小（9px相当） */
+      }
+    }
+
+    .site-title h1 {
+      font-size: 4rem; /* 40px → 32px相当 */
+    }
+
+    .site-title h2 {
+      font-size: 2.2rem; /* 24px → 約20px */
+    }
+
+    .official-text {
+      font-size: 2.4rem; /* 約24px */
+    }
+
+    .fade-text {
+      font-size: 2rem;
+    }
+
+    .lyric-jp {
+      font-size: 1.8rem;
+    }
+
+    .lyric-fake {
+      font-size: 1.4rem;
+    }
+
+    .year {
+      font-size: 2rem;
+    }
+
+    .event {
+      font-size: 1.6rem;
+    }
+
+    .top-nav a {
+      font-size: 1.7rem;
+    }
+
+    footer {
+      font-size: 1.2rem;
+    }
+  </style>
 </head>
 <body>
 
@@ -20,6 +75,7 @@
       </div>
     </div>
 
+    
     <nav class="nav top-nav">
       <a href="about.html">About</a>
       <a href="live.html">Live</a>
@@ -31,7 +87,7 @@
   </section>
 
   <section class="lyric">
-    <p class="lyric-jp">この星で過ごす束の間、<br>それでも僕たちは出逢えた</p>
+    <p class="lyric-jp">この星で過ごす束の間、<br>それでも僕たちは出逢えた。</p>
     <p class="lyric-fake">u luen sain a mi yeal<br>luen nyns tea sain o o</p>
   </section>
 
@@ -114,6 +170,7 @@
     <p>&copy; 2025 Dobashi Yuma</p>
   </footer>
 
+  
   <script src="script.js"></script>
 </body>
 </html>

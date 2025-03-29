@@ -112,8 +112,28 @@ document.addEventListener("DOMContentLoaded", () => {
           entry.target.classList.add('visible');
         }
       });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.5 });
 
     yearBlocks.forEach(el => observer.observe(el));
   }
 });
+
+
+// Home「この星で過ごす束の間、それでも僕たちは出逢えた。u luen sain a mi yeal luen nyns tea sain o o」に適用
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const lyricLines = document.querySelectorAll('.lyric p');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in-up');
+        observer.unobserve(entry.target); // 一度だけ
+      }
+    });
+  }, { threshold: 0.3 });
+
+  lyricLines.forEach(line => observer.observe(line));
+});
+

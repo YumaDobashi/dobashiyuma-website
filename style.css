@@ -1,3 +1,19 @@
+html {
+  font-size: 40%;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 36%;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 34%;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -98,29 +114,29 @@ a {
 
 /* === 横スクロール年表用 === */
 .history-scroll {
-  margin-top: 120px;
+  margin-top: 90px;
   overflow-x: auto;
   white-space: nowrap;
   scroll-snap-type: x mandatory;
   padding: 60px 0;
   background-color: #F3EFE8;
-  direction: rtl;
+  direction: ltr;
 }
 
 .history-track {
   display: inline-flex;
-  gap: 60px;
+  gap: 50px;
   padding: 0 40px;
   direction: ltr;
 }
 
 .year-block {
   writing-mode: vertical-rl;
-  text-orientation: upright;
+  text-orientation: right;
   scroll-snap-align: start;
   border-left: 1px solid rgba(0,0,0,0.1);
   padding-left: 20px;
-  min-height: 400px;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -288,9 +304,9 @@ footer {
 
 /* === トップページ用：次回ライブ案内 === */
 .live-preview {
-  max-width: 600px;
-  margin: 80px auto;
-  padding: 28px 24px;
+  max-width: 400px;
+  margin: 70px auto;
+  padding: 24px 20px;
   background-color: rgba(255, 255, 255, 0.05);
   border-left: 4px solid #C1A973;
   border-radius: 6px;
@@ -301,26 +317,27 @@ footer {
 }
 
 .live-preview h3 {
-  font-size: 20px;
+  font-size: 16px;
   margin-bottom: 10px;
   color: #C1A973;
   letter-spacing: 0.05em;
 }
 
 .live-preview p {
-  font-size: 14px;
-  margin: 6px 0;
-  line-height: 1.6;
+  font-size: 10px;
+  margin: 4px 0;
+  line-height: 1.4;
 }
 
 .live-preview a {
   color: #C1A973;
-  font-size: 14px;
+  font-size: 10px;
   text-decoration: underline;
 }
 
 
 /* === Liveページ専用スタイル === */
+
 .live-page {
   background-color: #03062cda;
   color: #6b9837;

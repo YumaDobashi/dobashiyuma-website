@@ -1,5 +1,20 @@
 /* shared.css | 共通スタイルシート */
-
+html {
+    font-size: 40%;
+  }
+  
+  @media (max-width: 768px) {
+    html {
+      font-size: 36%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    html {
+      font-size: 34%;
+    }
+  }
+  
 /* ---------- HEADER ---------- */
 header {
     position: fixed;
@@ -16,18 +31,58 @@ header {
   
   .logo {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 35px;
+    font-size: 20px;
     font-weight: 700;
     color: #1F1F1F;
     text-decoration: none;
   }
   
-  nav a {
-    margin-left: 24px;
-    font-size: 24px;
-    color: #4A4744;
-    text-decoration: none;
+
+  nav {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 2rem;
+    z-index: 1000;
   }
+
+  nav a {
+    font-size: 2.0rem;
+    color: #151312;
+    text-decoration: none;
+    font-weight: 300;
+  }
+
+  @media (max-width: 600px) {
+    nav {
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      justify-content: center;
+    }
+
+    nav a {
+      font-size: 1.2rem;
+    }
+  }
+
+  @keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.lyric p.fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+
   
   
   /* ---------- FOOTER ---------- */
