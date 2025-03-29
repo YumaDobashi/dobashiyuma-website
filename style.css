@@ -117,15 +117,15 @@ a {
 .sns-icons {
   position: fixed;
   top: 2rem;
-  right: 2.4rem;
+  right: 3rem;
   display: flex;
-  gap: 1.6rem;
+  gap: 0rem;
   z-index: 1000;
   background: none;
 }
 
 .sns-icons a {
-  font-size: 2.4rem;
+  font-size: 3rem;
   color: #FAF8F2;
   transition: color 0.3s ease;
 }
