@@ -67,22 +67,60 @@ header {
     }
   }
 
+  .sns-links {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    gap: 1.6rem;
+  }
+  
+  
+  .sns-links a {
+    font-size: 2rem;
+    color: #4A4744;
+    transition: color 0.3s ease;
+  }
+  
+  .sns-links a:hover {
+    color: #C1A973;
+  }
+  
+  @media (max-width: 768px) {
+    .sns-links {
+      margin-top: 1rem;
+      justify-content: flex-start;
+    }
+  
+    .sns-links a {
+      font-size: 1.8rem;
+    }
+  }
+
+
+  
+  
+
   @keyframes fadeInUp {
-  0% {
+    0% {
+      opacity: 0;
+      transform: translateY(2rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .lyric p {
     opacity: 0;
     transform: translateY(2rem);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
   }
-  100% {
+  .lyric p.visible {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.lyric p.fade-in-up {
-  opacity: 0;
-  animation: fadeInUp 1.5s ease-out forwards;
-}
-
+  
   
   
   /* ---------- FOOTER ---------- */
@@ -135,4 +173,6 @@ header {
   }
   
   /* その他、共通で使うクラスはここに追記していけます */
+  
+
   

@@ -112,6 +112,40 @@ a {
   opacity: 1;
 }
 
+
+/* SNSアイコン（トップページ・常時表示・背景なし） */
+.sns-icons {
+  position: fixed;
+  top: 2rem;
+  right: 2.4rem;
+  display: flex;
+  gap: 1.6rem;
+  z-index: 1000;
+  background: none;
+}
+
+.sns-icons a {
+  font-size: 2.4rem;
+  color: #FAF8F2;
+  transition: color 0.3s ease;
+}
+
+.sns-icons a:hover {
+  color: #C1A973;
+}
+
+@media (max-width: 768px) {
+  .sns-icons {
+    top: 1rem;
+    right: 1.4rem;
+    gap: 1.2rem;
+  }
+
+  .sns-icons a {
+    font-size: 2rem;
+  }
+}
+
 /* === 横スクロール年表用 === */
 .history-scroll {
   margin-top: 90px;

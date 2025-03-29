@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Portal | Dobashi Yuma</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      background: radial-gradient(ellipse at center, #010103, #04040b, #24243e);
+      font-family: 'Shippori Mincho B1', serif;
+      color: #f3f2ec;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      text-align: center;
+      padding: 2rem;
+      transition: transform 3s ease, opacity 2s ease;
+    }
+
+    .container.zoom-out {
+      transform: scale(0.5);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .gate {
+      width: 100px;
+      height: 100px;
+      border: 2px solid rgba(224, 211, 211, 0.5);
+      border-radius: 49%;
+      backdrop-filter: blur(4px);
+      animation: pulse 4s infinite ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 3rem;
+      cursor: pointer;
+    }
+
+    .gate-text {
+      font-size: 1.0rem;
+      opacity: 0.8;
+    }
+
+    .quote {
+      font-size: 1.0rem;
+      max-width: 400px;
+      line-height: 1.8;
+      margin-top: 1rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .afterworld {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      opacity: 0;
+      pointer-events: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;
+      color: #f3f2ec;
+      transition: opacity 2s ease;
+    }
+
+    .afterworld.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.1); }
+      50% { box-shadow: 0 0 25px 10px rgba(255, 255, 255, 0.4); }
+      100% { box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.1); }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="stars"></canvas>
+
+  <div class="container" id="portal">
+    <div class="gate" id="enterGate">
+      <div class="gate-text"></div>
+    </div>
+    <div class="quote">
+      ここに書くことは、あなた自身に書くこと<br/>
+      Contact begins not with others, but with your own soul.
+    </div>
+  </div>
+
+  <div class="afterworld" id="afterworld">
+    ようこそ、あなたの深層へ。
+  </div>
+
+  <script>
+    // 星アニメーション
+    const canvas = document.getElementById('stars');
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    let stars = [];
+
+    function initStars() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+      stars = Array.from({ length: 300 }, () => ({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        r: Math.random() * 1.2,
+        o: Math.random(),
+        speed: 0.2 + Math.random() * 0.5
+      }));
+    }
+
+    function drawStars() {
+      ctx.clearRect(0, 0, width, height);
+      stars.forEach(star => {
+        ctx.beginPath();
+        ctx.globalAlpha = star.o;
+        ctx.arc(star.x, star.y, star.r, 0, 2 * Math.PI);
+        ctx.fillStyle = '#fff';
+        ctx.fill();
+        star.y += star.speed;
+        if (star.y > height) {
+          star.y = 0;
+          star.x = Math.random() * width;
+        }
+      });
+      ctx.globalAlpha = 1;
+      requestAnimationFrame(drawStars);
+    }
+
+    window.addEventListener('resize', initStars);
+    initStars();
+    drawStars();
+
+    // ゲートクリック時の演出
+    document.getElementById('enterGate').addEventListener('click', () => {
+      const portal = document.getElementById('portal');
+      const afterworld = document.getElementById('afterworld');
+      portal.classList.add('zoom-out');
+
+      setTimeout(() => {
+        afterworld.classList.add('visible');
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
+
