@@ -3,77 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <title>Lyrics | Dobashi Yuma</title>
-  <link rel="stylesheet" href="shared.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Shippori+Mincho+B1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="shared.css" />
   <style>
-    html {
-      font-size: 40%;
-    }
-
+    html { font-size: 40%; }
     body {
       margin: 0;
+      padding-top: 10rem;
       background-color: #FCFAF5;
       font-family: 'Shippori Mincho B1', serif;
-      line-height: 1.9;
       color: #1F1F1F;
-      padding-top: 10rem;
+      line-height: 1.9;
     }
 
-    .vertical-poem {
-      writing-mode: vertical-rl;
-      text-orientation: upright;
-      font-size: 2rem;
+    .poem-block {
       max-width: 90vw;
       margin: 6rem auto;
       padding: 4rem;
       background-color: #F8F6F0;
       border-left: 0.6rem solid #C1A973;
       box-shadow: 0 0.2rem 1rem rgba(0,0,0,0.05);
-      position: relative;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
     }
 
     .poem-title {
+      opacity: 0;
+      font-size: 2.2rem;
       font-weight: bold;
-      font-size: 2.4rem;
-      color: transparent;
-      transition: color 0.5s ease;
       margin-bottom: 1rem;
+      transition: opacity 0.5s ease;
     }
 
-    .poem-title:hover {
-      color: #C1A973;
+    .poem-block:hover .poem-title {
+      opacity: 1;
+    }
+
+    .poem-preview,
+    .poem-full {
+      font-size: 2rem;
     }
 
     .poem-full {
+      display: none;
       max-height: 0;
       overflow: hidden;
-      transition: max-height 1.2s ease-in-out, opacity 1.2s ease;
       opacity: 0;
+      transition: max-height 1.4s ease, opacity 1.4s ease;
     }
 
     .poem-full.expanded {
-      max-height: 1000rem;
+      display: block;
+      max-height: 200rem;
       opacity: 1;
     }
 
     .poem-toggle {
-      margin-top: 1rem;
-      background: none;
-      border: none;
-      color: #C1A973;
-      font-size: 1.4rem;
-      cursor: pointer;
-      font-family: 'Shippori Mincho B1', serif;
-      transition: color 0.3s ease;
-    }
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    background: none;
+    border: none;
+    color: #C1A973;
+    cursor: pointer;
+    font-family: 'Shippori Mincho B1', serif;
+    transition: color 0.3s ease;
+  }
 
-    .poem-toggle:hover {
-      color: #a88c5a;
-    }
+.poem-toggle:hover {
+  color: #a88c5a;
+}
+
+
 
     footer {
       text-align: center;
@@ -87,8 +90,8 @@
   <header>
     <a href="index.html" class="logo">Dobashi Yuma</a>
     <div class="sns-icons">
-      <a href="https://www.instagram.com/dobashi.yuma/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://x.com/dobashiyuma?s=21" target="_blank" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.instagram.com/dobashi.yuma/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/dobashiyuma?s=21" target="_blank"><i class="fab fa-x-twitter"></i></a>
     </div>
     <nav class="main-nav">
       <a href="index.html">Home</a>
@@ -101,9 +104,10 @@
     </nav>
   </header>
 
-  <section class="vertical-poem poem-block">
-    <div class="poem-title">対岸に辿り着く頃には、</div>
+  <section class="poem-block">
+    <div class="poem-title">清らかな濁流</div>
     <p class="poem-preview">
+      対岸に辿り着く頃には、<br>
       すべてが懐かしく感じるだろう。<br>
       澄み切った川底は、<br>
       影さえも良く見えた。
@@ -117,7 +121,7 @@
     <button class="poem-toggle">続きを読む</button>
   </section>
 
-  <section class="vertical-poem poem-block">
+  <section class="poem-block">
     <div class="poem-title">In The Rolling Stories</div>
     <p class="poem-preview">
       叶わなかった<br>
@@ -129,38 +133,50 @@
       描かれた色のすべてを愛せたわけじゃない<br>
       登場したみんなと分かり合えたわけじゃないけど<br>
       好きなものにも出会えた<br>
-      あなたとも笑い合えた<br><br>
+      あなたとも笑い合えた<br>
+      <br>
       Hey, This is the story of my life.<br>
       書き殴ったような日々でさえも<br>
-      忘れられない思い出ばかりだ<br><br>
+      忘れられない思い出ばかりだ<br>
+      <br>
       へい、どうしても<br>
       君の手を離さないといけない日が来ても<br>
-      この物語のあとがきは書かないままにしておくよ<br><br>
+      この物語のあとがきは書かないままにしておくよ<br>
+      <br>
       夢とか愛だとかありふれた言葉が<br>
       ときどき僕らを追い詰めることもある<br>
       立ちすくんでぼやいてた<br>
-      一番星がもう光ってらぁ<br><br>
+      一番星がもう光ってらぁ<br>
+      <br>
       かつて聴こえてた声援さえも懐かしく<br>
       何も掴めてないと嘆く僕に<br>
       飛び込み続ける姿が<br>
-      美しいんだと君が言うから<br><br>
+      美しいんだと君が言うから<br>
+      <br>
       Hey, This is the story of my life.<br>
       書き殴ったような日々でさえも<br>
-      忘れたくない I won't let them fade away<br><br>
+      忘れたくない I won't let them fade away<br>
+      <br>
       へい、どうしても<br>
       僕の手が届かないように思えたとしても<br>
-      伸ばした手で揺れる明日を手繰り寄せていくよ<br><br>
+      伸ばした手で揺れる明日を手繰り寄せていくよ<br>
+      <br>
       呆れ返るほどやめられないままだ<br>
       「振り返るにはまだまだ早すぎるぜ」<br>
       ってあの人の歌で思い出す<br>
       暗闇に浮かぶ新月が照らす<br>
-      この道の歩き方を<br><br>
+      この道の歩き方を<br>
+      <br>
       Hey, This is the story of my life.<br>
       書き殴ったような日々でさえも<br>
-      忘れられない思い出ばかりだ<br><br>
+      忘れられない思い出ばかりだ<br>
+      <br>
       へい、どうしても<br>
       君の手を離さないといけない日が来ても<br>
       この物語のあとがきは書かないままにしておくよ
+    </p>
+    <button class="poem-toggle">続きを読む</button>
+  </section>
     </p>
     <button class="poem-toggle">続きを読む</button>
   </section>
@@ -170,15 +186,13 @@
   </footer>
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.poem-toggle').forEach(button => {
-        const full = button.previousElementSibling;
-        full.classList.remove('expanded'); // 初期状態を閉じる
-
-        button.addEventListener('click', () => {
-          full.classList.toggle('expanded');
-          button.textContent = full.classList.contains('expanded') ? '閉じる' : '続きを読む';
-        });
+    document.querySelectorAll('.poem-block').forEach(block => {
+      const full = block.querySelector('.poem-full');
+      const toggle = block.querySelector('.poem-toggle');
+      full.classList.remove('expanded'); // 初期状態で閉じておく
+      toggle.addEventListener('click', () => {
+        const isOpen = full.classList.toggle('expanded');
+        toggle.textContent = isOpen ? '閉じる' : '続きを読む';
       });
     });
   </script>
