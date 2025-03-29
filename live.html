@@ -20,7 +20,6 @@
       background-attachment: fixed;
       padding-top: 100px;
     }
-    
 
     header {
       position: fixed;
@@ -105,13 +104,13 @@
     }
 
     .live-flyer {
-     width: 40%;
-     height: auto;
-     max-height: 600px;  /* 最大縦サイズ指定で制御 */
-     object-fit: contain;
-     display: block;
-     margin-top: 12px;
-     transition: transform 0.3s ease;
+      width: 40%;
+      height: auto;
+      max-height: 600px;
+      object-fit: contain;
+      display: block;
+      margin-top: 12px;
+      transition: transform 0.3s ease;
     }
 
     .live-flyer:hover {
@@ -130,8 +129,6 @@
         margin-top: 16px;
       }
     }
-
-
   </style>
 </head>
 <body>
@@ -149,36 +146,12 @@
   </header>
 
   <h1 class="page-title">Live Schedule</h1>
-
-  <div class="live-block">
-    <div class="live-text">
-      <p class="live-date">2025年4月6日（日）</p>
-      <p class="live-location">焼き鳥元ちゃん（富士宮）</p>
-      <p class="live-title">BROS FEST.への導き</p>
-      <p class="live-meta">出演：土橋悠宇 / dsk.og</p>
-      <p class="live-meta">開場 16:00 / 開演 17:00</p>
-      <p class="live-meta">チケット：2,000円（+1D）</p>
-      <p class="live-note">　　</p>
-    </div>
-    <img src="images/flyer-sample1.jpg" alt="ライブフライヤー" class="live-flyer" />
-  </div>
-
-  <div class="live-block">
-    <div class="live-text">
-      <p class="live-date">2025年4月19日（土）</p>
-      <p class="live-location">RINCOLO（御殿場）</p>
-      <p class="live-title">単独公演 2025</p>
-      <p class="live-meta">出演：土橋悠宇</p>
-      <p class="live-meta">開場 18:00 / 開演 19:00</p>
-      <p class="live-meta">チケット：2,000円（+1D）</p>
-      <p class="live-note">　　</p>
-    </div>
-    <img src="images/flyer-sample2.jpg" alt="ライブフライヤー" class="live-flyer" />
-  </div>
+  <div id="live-container"></div>
 
   <footer>
     &copy; 2025 Dobashi Yuma
   </footer>
-  
+
+  <script src="script.js"></script>
 </body>
 </html>
