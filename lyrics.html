@@ -10,70 +10,86 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Shippori+Mincho+B1&display=swap" rel="stylesheet">
   <style>
-   
-  html {
-    font-size: 40%;
-  }
-
-  body {
-    margin: 0;
-    background-color: #FCFAF5;
-    font-family: 'Shippori Mincho B1', serif;
-    line-height: 1.9;
-    color: #1F1F1F;
-    padding-top: 10rem;
-  }
-
-  .vertical-poem {
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    font-size: 2rem;
-    max-width: 90vw;
-    margin: 6rem auto;
-    padding: 4rem;
-    background-color: #F8F6F0;
-    border-left: 0.6rem solid #C1A973;
-    box-shadow: 0 0.2rem 1rem rgba(0,0,0,0.05);
-  }
-
-  .vertical-poem p {
-    margin: 0;
-  }
-
-  footer {
-    text-align: center;
-    font-size: 1.2rem;
-    padding: 4rem;
-    color: #888;
-  }
-
-  @media (max-width: 768px) {
-    nav a {
-      font-size: 2rem;
-      margin-left: 1.6rem;
+    html {
+      font-size: 40%;
     }
 
-    .logo {
-      font-size: 2.8rem;
+    body {
+      margin: 0;
+      background-color: #FCFAF5;
+      font-family: 'Shippori Mincho B1', serif;
+      line-height: 1.9;
+      color: #1F1F1F;
+      padding-top: 10rem;
     }
 
     .vertical-poem {
-      font-size: 1.8rem;
-      padding: 3rem;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      font-size: 2rem;
+      max-width: 90vw;
+      margin: 6rem auto;
+      padding: 4rem;
+      background-color: #F8F6F0;
+      border-left: 0.6rem solid #C1A973;
+      box-shadow: 0 0.2rem 1rem rgba(0,0,0,0.05);
+      position: relative;
     }
-  }
-</style>
 
+    .poem-title {
+      font-weight: bold;
+      font-size: 2.4rem;
+      color: transparent;
+      transition: color 0.5s ease;
+      margin-bottom: 1rem;
+    }
+
+    .poem-title:hover {
+      color: #C1A973;
+    }
+
+    .poem-full {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 1.2s ease-in-out, opacity 1.2s ease;
+      opacity: 0;
+    }
+
+    .poem-full.expanded {
+      max-height: 1000rem;
+      opacity: 1;
+    }
+
+    .poem-toggle {
+      margin-top: 1rem;
+      background: none;
+      border: none;
+      color: #C1A973;
+      font-size: 1.4rem;
+      cursor: pointer;
+      font-family: 'Shippori Mincho B1', serif;
+      transition: color 0.3s ease;
+    }
+
+    .poem-toggle:hover {
+      color: #a88c5a;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 1.2rem;
+      padding: 4rem;
+      color: #888;
+    }
+  </style>
 </head>
 <body>
   <header>
     <a href="index.html" class="logo">Dobashi Yuma</a>
-
     <div class="sns-icons">
-        <a href="https://www.instagram.com/dobashi.yuma/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://x.com/dobashiyuma?s=21" target="_blank" aria-label="X"><i class="fab fa-x-twitter"></i></a>
-　　 </div>
-
+      <a href="https://www.instagram.com/dobashi.yuma/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/dobashiyuma?s=21" target="_blank" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+    </div>
     <nav class="main-nav">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -83,25 +99,88 @@
       <a href="photos.html">Photos</a>
       <a href="contact.html">Contact</a>
     </nav>
-    
   </header>
 
-  <section class="vertical-poem">
-    <p>
-      対岸に辿り着く頃には、<br>
+  <section class="vertical-poem poem-block">
+    <div class="poem-title">対岸に辿り着く頃には、</div>
+    <p class="poem-preview">
       すべてが懐かしく感じるだろう。<br>
       澄み切った川底は、<br>
-      影さえも良く見えた。<br>
+      影さえも良く見えた。
+    </p>
+    <p class="poem-full">
       深いほど、<br>
       深いほど。<br>
-      それは静かに、<br>
-      落ちていった。
+      振り返るのを忘れてしまうのは、<br>
+      渡った先で笑う君に会いたいから。
     </p>
+    <button class="poem-toggle">続きを読む</button>
+  </section>
+
+  <section class="vertical-poem poem-block">
+    <div class="poem-title">In The Rolling Stories</div>
+    <p class="poem-preview">
+      叶わなかった<br>
+      願いの一つ二つ握りしめたまま<br>
+      書き始めたあとがきは
+    </p>
+    <p class="poem-full">
+      まだ君には早いと夕立が紙を滲ませる<br><br>
+      描かれた色のすべてを愛せたわけじゃない<br>
+      登場したみんなと分かり合えたわけじゃないけど<br>
+      好きなものにも出会えた<br>
+      あなたとも笑い合えた<br><br>
+      Hey, This is the story of my life.<br>
+      書き殴ったような日々でさえも<br>
+      忘れられない思い出ばかりだ<br><br>
+      へい、どうしても<br>
+      君の手を離さないといけない日が来ても<br>
+      この物語のあとがきは書かないままにしておくよ<br><br>
+      夢とか愛だとかありふれた言葉が<br>
+      ときどき僕らを追い詰めることもある<br>
+      立ちすくんでぼやいてた<br>
+      一番星がもう光ってらぁ<br><br>
+      かつて聴こえてた声援さえも懐かしく<br>
+      何も掴めてないと嘆く僕に<br>
+      飛び込み続ける姿が<br>
+      美しいんだと君が言うから<br><br>
+      Hey, This is the story of my life.<br>
+      書き殴ったような日々でさえも<br>
+      忘れたくない I won't let them fade away<br><br>
+      へい、どうしても<br>
+      僕の手が届かないように思えたとしても<br>
+      伸ばした手で揺れる明日を手繰り寄せていくよ<br><br>
+      呆れ返るほどやめられないままだ<br>
+      「振り返るにはまだまだ早すぎるぜ」<br>
+      ってあの人の歌で思い出す<br>
+      暗闇に浮かぶ新月が照らす<br>
+      この道の歩き方を<br><br>
+      Hey, This is the story of my life.<br>
+      書き殴ったような日々でさえも<br>
+      忘れられない思い出ばかりだ<br><br>
+      へい、どうしても<br>
+      君の手を離さないといけない日が来ても<br>
+      この物語のあとがきは書かないままにしておくよ
+    </p>
+    <button class="poem-toggle">続きを読む</button>
   </section>
 
   <footer>
     &copy; 2025 Dobashi Yuma
   </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.poem-toggle').forEach(button => {
+        const full = button.previousElementSibling;
+        full.classList.remove('expanded'); // 初期状態を閉じる
+
+        button.addEventListener('click', () => {
+          full.classList.toggle('expanded');
+          button.textContent = full.classList.contains('expanded') ? '閉じる' : '続きを読む';
+        });
+      });
+    });
+  </script>
 </body>
 </html>
