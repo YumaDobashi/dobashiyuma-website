@@ -12,14 +12,14 @@ document.addEventListener("DOMContentLoaded", () => {
       ""
     ];
     let index = 0;
-
+  
     function showNextText() {
       textElement.style.opacity = 0;
-
+  
       setTimeout(() => {
         textElement.textContent = texts[index];
         textElement.style.opacity = 1;
-
+  
         if (index === texts.length - 1) {
           setTimeout(() => {
             nameElement.classList.add('fade-in-text', 'visible');
@@ -28,21 +28,26 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 1500);
           }, 1500);
         }
-
+  
         index++;
       }, 1500);
     }
-
-    textElement.textContent = texts[0];
-    textElement.style.opacity = 1;
-    index++;
-
+  
+    // 最初の詩もゆっくり表示させる
+    textElement.style.opacity = 0;
+    setTimeout(() => {
+      textElement.textContent = texts[0];
+      textElement.style.opacity = 1;
+      index++;
+    }, 900);
+  
     setInterval(() => {
       if (index < texts.length) {
         showNextText();
       }
     }, 5500);
   }
+  
 
 
   // 年表スクロールアニメーション
