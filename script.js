@@ -44,42 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 5500);
   }
 
-  // Liveページの詳細表示
-  const container = document.getElementById('live-container');
-  if (container) {
-    lives.forEach(live => {
-      const div = document.createElement('div');
-      div.className = 'live-block';
-      div.innerHTML = `
-        <div class="live-text">
-          <p class="live-date">${live.date}</p>
-          <p class="live-location">${live.venue}</p>
-          <p class="live-title">${live.title}</p>
-          <p class="live-meta">出演：${live.acts}</p>
-          <p class="live-meta">開場 ${live.time}</p>
-          <p class="live-meta">チケット：${live.ticket}</p>
-          <p class="live-note">${live.note || ''}</p>
-        </div>
-        <img src="${live.flyer}" alt="ライブフライヤー" class="live-flyer" />
-      `;
-      container.appendChild(div);
-    });
-  }
-
-  // トップページのライブプレビュー（次回1件）
-  const preview = document.getElementById('live-preview');
-  if (preview && lives.length > 0) {
-    const next = lives[0];
-    preview.innerHTML = `
-      <div class="live-preview">
-        <h3>Next Live</h3>
-        <p>${next.date} @ ${next.venue}</p>
-        <p><strong>${next.title}</strong></p>
-        <p>出演：${next.acts}</p>
-        <p><a href="live.html">→ 詳細を見る</a></p>
-      </div>
-    `;
-  }
 
   // 年表スクロールアニメーション
   const yearBlocks = document.querySelectorAll('.year-block');
@@ -119,3 +83,19 @@ document.addEventListener("DOMContentLoaded", () => {
   lyricLines.forEach(line => observer.observe(line));
 });
 
+
+
+ // トップページのライブプレビュー（次回1件）
+ const preview = document.getElementById('live-preview');
+ if (preview && lives.length > 0) {
+   const next = lives[0];
+   preview.innerHTML = `
+     <div class="live-preview">
+       <h3>Next Live</h3>
+       <p>${next.date} @ ${next.venue}</p>
+       <p><strong>${next.title}</strong></p>
+       <p>出演：${next.acts}</p>
+       <p><a href="live.html">→ 詳細を見る</a></p>
+     </div>
+   `;
+ }

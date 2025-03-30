@@ -123,16 +123,16 @@
 </head>
 
 <body>
-  <header>
-    <a href="index.html" class="logo">Dobashi Yuma</a>
-    <div class="sns-icons">
-      <a href="https://www.instagram.com/dobashi.yuma/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://x.com/dobashiyuma?s=21" target="_blank" aria-label="X"><i class="fab fa-x-twitter"></i></a>
-    </div>
+    <header>
+        <a href="index.html" class="logo">Dobashi Yuma</a>
+
+        <div class="sns-icons">
+            <a href="https://www.instagram.com/dobashi.yuma/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/dobashiyuma?s=21" target="_blank" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+    　　 </div>
     <nav class="main-nav">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="live.html">Live</a>
       <a href="works.html">Works</a>
       <a href="lyrics.html">Lyrics</a>
       <a href="photos.html">Photos</a>
@@ -143,6 +143,7 @@
   <h1 class="page-title">Live Schedule</h1>
   <div id="live-container"></div>
 
+
   <footer>
     &copy; 2025 Dobashi Yuma
   </footer>
@@ -152,45 +153,30 @@
     <div class="modal-content">
       <span class="close-btn">&times;</span>
       <h2>ライブ予約フォーム</h2>
-      <form id="reserve-form">
-        <input type="hidden" id="live-title" name="liveTitle" />
-        <p id="live-info-display"></p>
-        <label>お名前：</label><br />
-        <input type="text" name="name" required /><br /><br />
-        <label>メールアドレス：</label><br />
-        <input type="email" name="email" required /><br /><br />
-        <label>メッセージ：</label><br />
-        <textarea name="message" rows="4" placeholder="ご要望などあればご記入ください"></textarea><br /><br />
-        <button type="submit">送信</button>
+        <form id="reserve-form" action="https://formspree.io/f/xdkellqg" method="POST">
+            <input type="hidden" name="ライブタイトル" id="live-title">
+            <p id="live-info-display"></p>
+          
+            <label>お名前：</label><br>
+            <input type="text" name="お名前" required><br><br>
+          
+            <label>メールアドレス：</label><br>
+            <input type="email" name="email" required><br><br>
+          
+            <label>メッセージ：</label><br>
+            <textarea name="メッセージ" rows="4"></textarea><br><br>
+          
+            <button type="submit">送信</button>
+          </form>
+          
       </form>
     </div>
   </div>
 
   <!-- JavaScript -->
+  <script src="lives.js"></script>
   <script>
-    const lives = [
-      {
-        date: "2025年4月6日（日）",
-        venue: "焼き鳥元ちゃん（富士宮）",
-        title: "「BROS FEST.への導き」",
-        acts: "土橋悠宇 / dsk.og",
-        ticket: "¥2,000（+1D）",
-        time: "16:00 開場 / 17:00 開演",
-        note: "",
-        flyer: "images/flyer-sample1.jpg"
-      },
-      {
-        date: "2025年4月19日（土）",
-        venue: "RINCOLO（御殿場）",
-        title: "「単独公演2025春」",
-        acts: "土橋悠宇",
-        ticket: "¥2,000（+1D）",
-        time: "18:00 開場 / 19:00 開演",
-        note: "",
-        flyer: "images/flyer-sample2.jpg"
-      }
-    ];
-
+   
     const container = document.getElementById('live-container');
     if (container) {
       lives.forEach((live, index) => {
@@ -237,11 +223,11 @@
     window.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
 
     form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('仮送信：後でメール処理を実装してください。');
-      form.reset();
       modal.style.display = 'none';
     });
+
+    
+    
   </script>
 </body>
 </html>
