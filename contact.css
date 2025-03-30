@@ -1,0 +1,116 @@
+.contact-page::before {
+    content: "no mor rame era\A\
+  no mor rami\A\
+  du ara arelo\A\
+  ru ara me\A\
+  mes era mal selo\A\
+  ru ara me\A\
+  del en mi ma sora\A\
+  \A\
+  ben michelo se-ma\A\
+  del ras ame\A\
+  bell en michelo-ma\A\
+  du ras ame\A\
+  we sema san emo\A\
+  du ras ame\A\
+  del en mi ma sora\A\
+  \A\
+  hmm...emela soma se neara\A\
+  hmm...emela na sora se ma\A\
+  \A\
+  ai nuon nyn yeal\A\
+  noom myns tea sain o o\A\
+  u luen sain a mi yeal\A\
+  luen nyns tea sain o o\A\
+  \A\
+  no o same se la\A\
+  nan o samea\A\
+  du ara nan sem o\A\
+  ru ara me\A\
+  rem ela nan sem o\A\
+  ru ara me\A\
+  del en mi ma sora\A\
+  \A\
+  nen michelo se-ma\A\
+  del ra same\A\
+  nell en michelo-ma\A\
+  du ras ame\A\
+  we sena lans emo\A\
+  du ras ame\A\
+  del en mi ma sora\A\
+  \A\
+  hmm...emela soma se neara\A\
+  hmm...emela na sora se ma\A\
+  \A\
+  ai nuon nyn yeal\A\
+  noom myns tea sain o o\A\
+  u luen sain a mi yeal\A\
+  luen nyns tea sain o o\A\
+  \A\
+  no o same se la\A\
+  nan o samea\A\
+  du ara nan sem o\A\
+  ru ara me\A\
+  rem ela nan sem o\A\
+  ru ara me\A\
+  del en mi ma sora\A\
+  \A\
+  ai nuon nyn yeal\A\
+  noom myns tea sain o o\A\
+  u luen sain a mi yeal\A\
+  luen nyns tea sain o ";
+
+   white-space: pre-wrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 0.8rem;
+  line-height: 3.8rem;
+  color: rgba(21, 12, 2, 0.028);
+  z-index: 1000;
+  padding: 5rem;
+  pointer-events: none;
+  background-size: cover;
+  overflow: hidden;
+}
+  .text-wall {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* canvasが -1 ならこれでOK */
+  pointer-events: none;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  opacity: 0.05;
+  color: rgba(255, 255, 255, 0.126);
+  font-family: 'Shippori Mincho B1', serif;
+  white-space: nowrap;
+  overflow: hidden;
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 2.4rem,
+    rgba(255,255,255,0.05) 2.4rem,
+    rgba(255,255,255,0.05) 4.8rem
+  );
+}
+
+.text-wall::before {
+  content: "no mor rame era no mor rami du ara arelo ru ara me mes era mal selo ru ara me del en mi ma sora "
+         "ben michelo se-ma del ras ame bell en michelo-ma du ras ame we sema san emo du ras ame del en mi ma sora "
+         "hmm...emela soma se neara hmm...emela na sora se ma "
+         "ai nuon nyn yeal noom myns tea sain o o u luen sain a mi yeal luen nyns tea sain o o ";
+  display: block;
+  padding-left: 10%;
+  padding-top: 5%;
+  animation: scrollText 90s linear infinite;
+}
+
+@keyframes scrollText {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}

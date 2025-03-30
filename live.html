@@ -177,27 +177,54 @@
   <script src="lives.js"></script>
   <script>
    
-    const container = document.getElementById('live-container');
-    if (container) {
-      lives.forEach((live, index) => {
-        const div = document.createElement('div');
-        div.className = 'live-block';
-        div.innerHTML = `
-          <div class="live-text">
-            <p class="live-date">${live.date}</p>
-            <p class="live-location">${live.venue}</p>
-            <p class="live-title">${live.title}</p>
-            <p class="live-meta">出演：${live.acts}</p>
-            <p class="live-meta">開場 ${live.time}</p>
-            <p class="live-meta">チケット：${live.ticket}</p>
-            <p class="live-note">${live.note || ''}</p>
-            <button class="reserve-btn" data-index="${index}">予約する</button>
-          </div>
-          <img src="${live.flyer}" alt="ライブフライヤー" class="live-flyer" />
-        `;
-        container.appendChild(div);
-      });
-    }
+   const now = new Date();
+const container = document.getElementById('live-container');
+
+if (container) {
+  const upcomingLives = lives.filter(live => new Date(live.dateRaw) >= now);
+  const pastLives = lives.filter(live => new Date(live.dateRaw) < now);
+
+  // 未来のライブ（通常表示）
+  upcomingLives.forEach((live, index) => {
+    const div = createLiveBlock(live, index, false);
+    container.appendChild(div);
+  });
+
+  // 過去のライブ（終了したライブ）
+  if (pastLives.length > 0) {
+    const heading = document.createElement('h2');
+    heading.textContent = 'Previous Performances';
+    heading.style.fontSize = '2.0rem';
+    heading.style.margin = '6rem 0 2rem';
+    heading.style.textAlign = 'center';
+    container.appendChild(heading);
+
+    pastLives.forEach((live, index) => {
+      const div = createLiveBlock(live, index, true);
+      div.style.opacity = '0.5';
+      container.appendChild(div);
+    });
+  }
+}
+
+function createLiveBlock(live, index, isPast) {
+  const div = document.createElement('div');
+  div.className = 'live-block';
+  div.innerHTML = `
+    <div class="live-text">
+      <p class="live-date">${live.date}</p>
+      <p class="live-location">${live.venue}</p>
+      <p class="live-title">${live.title}</p>
+      <p class="live-meta">出演：${live.acts}</p>
+      <p class="live-meta">開場 ${live.time}</p>
+      <p class="live-meta">チケット：${live.ticket}</p>
+      <p class="live-note">${live.note || ''}</p>
+      ${isPast ? '' : `<button class="reserve-btn" data-index="${index}">予約する</button>`}
+    </div>
+    <img src="${live.flyer}" alt="ライブフライヤー" class="live-flyer" />
+  `;
+  return div;
+}
 
     const modal = document.getElementById('reserve-modal');
     const closeBtn = document.querySelector('.close-btn');
